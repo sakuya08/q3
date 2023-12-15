@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON 選擇題</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JSON 選擇題</h1>
+
+<form id="quizForm">
+  <ol>
+    <li>
+      <p>問題: JSON 代表什麼？</p>
+      <input type="radio" name="q1" value="A"> JavaScript Object Network<br>
+      <input type="radio" name="q1" value="B"> JavaScript Order Navigation<br>
+      <input type="radio" name="q1" value="C"> Java Output Name<br>
+      <input type="radio" name="q1" value="D"> Java Operator Notation<br>
+    </li>
+
+    <li>
+      <p>問題: 在 JSON 中，哪個符號用於定義物件？</p>
+      <input type="radio" name="q2" value="A"> []<br>
+      <input type="radio" name="q2" value="B"> ()<br>
+      <input type="radio" name="q2" value="C"> {}<br>
+      <input type="radio" name="q2" value="D"> &lt;&gt;<br>
+    </li>
+
+    <li>
+      <p>問題: JSON 的主要用途是什麼？</p>
+      <input type="radio" name="q3" value="A"> 網頁設計<br>
+      <input type="radio" name="q3" value="B"> 遊戲開發<br>
+      <input type="radio" name="q3" value="C"> 資料庫管理<br>
+      <input type="radio" name="q3" value="D"> 電子郵件通訊<br>
+    </li>
+  </ol>
+
+  <button type="button" onclick="submitQuiz()">提交答案</button>
+</form>
+
+<script>
+  function submitQuiz() {
+    const answers = {
+      q1: document.querySelector('input[name="q1"]:checked').value,
+      q2: document.querySelector('input[name="q2"]:checked').value,
+      q3: document.querySelector('input[name="q3"]:checked').value
+    };
+
+    // 將答案傳送到後端或進行其他處理
+    console.log('使用者的答案:', answers);
+
+    // 可以在這裡添加其他處理邏輯，如計分、顯示結果等
+
+    alert('答案已提交！');
+  }
+</script>
+
+</body>
+</html>
